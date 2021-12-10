@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".report_accident">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/blue">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Report an accident"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/button_rounded_white"
+            android:layout_gravity="center">
+
+            <EditText
+                android:layout_marginTop="15dp"
+                android:inputType="text"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="User ID: "
+                android:textColorHint="@color/white"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+            <EditText
+                android:inputType="text"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Vehicle No: "
+                android:textColorHint="@color/white"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        app:cardCornerRadius="25dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:onClick="goTo_map"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="@color/blue">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="LOCATION"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+    <ImageView
+        android:onClick="goTo_camera"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/cam_icon" />
+
+    </LinearLayout>
+
+</RelativeLayout>
